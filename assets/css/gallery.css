@@ -15,6 +15,7 @@
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  border-radius: 3px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -46,19 +47,26 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
 }
 
+.modal-image{
+  object-fit: contain;
+  max-width: 90%;
+  max-height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
 /* Modal Content */
 .modal-content {
   z-index: 5;
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000;
-  margin: auto;
-  object-fit: cover;
+  top: 0%;
+  left: 0%;
+
 }
 
 /* The Close Button */
@@ -88,7 +96,7 @@
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 50%;
   width: auto;
   padding: 16px;
@@ -100,6 +108,8 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  opacity: 1;
+  z-index: 5;
 }
 
 /* Position the "next button" to the right */
@@ -116,10 +126,13 @@
 
 
 img.hover-shadow {
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.hover-shadow:hover {
+.hover-shadow {
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.19);
+}
+.hover-shadow:hover {
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.8), 0 7px 22px 0 rgba(0, 0, 0, 0.0.8);
   cursor: pointer;
 }
