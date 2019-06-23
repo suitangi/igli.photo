@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title>IGLI Photography</title>
+
+		<link rel="stylesheet" href="assets/css/gallery.css" />
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <script src="assets/js/gallery.js"></script> -->
+	</head>
+	<body>
+		<div class= "row">
+			<div class="column">
+				<img src="https://i.imgur.com/Bsc7ZhQ.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				<img src="https://i.imgur.com/v9v5CC5.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+
+			<div class="column">
+				<img src="https://i.imgur.com/03jSlOT.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				<img src="https://i.imgur.com/kUxiHHN.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				<img src="https://i.imgur.com/03jSlOT.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				<img src="https://i.imgur.com/kUxiHHN.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/03jSlOT.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/kUxiHHN.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/03jSlOT.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/kUxiHHN.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/03jSlOT.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/kUxiHHN.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" data-aos="fade-up">
+				<img src="https://i.imgur.com/Yslxp8f.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" data-aos="fade-up">
+
+			</div>
+
+		</div>
+
+		<div id="myModal" class="modal" onclick="closeModal()">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+		</div>
+
+		  <div id="modalContent" class="modal-content">
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/Bsc7ZhQ.jpg" style="width:100%" class="modal-image">
+		    </div>
+				<div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/Yslxp8f.jpg" style="width:100%" class="modal-image">
+		    </div>
+				<div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/v9v5CC5.jpg" style="width:100%" class="modal-image">
+		    </div>
+				<div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/03jSlOT.jpg" style="width:100%" class="modal-image">
+		    </div>
+				<div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/kUxiHHN.jpg" style="width:100%" class="modal-image">
+		    </div>
+				<div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="https://i.imgur.com/Yslxp8f.jpg" style="width:100%" class="modal-image">
+		    </div>
+
+		    <!-- Next/previous controls -->
+		    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+		  </div>
+
+  </body>
+</html>
+
+<script type = 'text/javascript'>
+	AOS.init()
+
+	// Open the Modal
+	function openModal() {
+	  document.getElementById("myModal").style.display = "block";
+		document.getElementById("modalContent").style.display = "block";
+	}
+
+	// Close the Modal
+	function closeModal() {
+	  document.getElementById("myModal").style.display = "none";
+		document.getElementById("modalContent").style.display = "none";
+	}
+
+
+
+	// Next/previous controls
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+	window.addEventListener('load', AOS.refresh);
+</script>
