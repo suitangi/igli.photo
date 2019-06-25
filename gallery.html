@@ -76,9 +76,10 @@
 
 		<div id="myModal" class="modal" onclick="closeModal()">
 			<span class="close cursor" onclick="closeModal()">&times;</span>
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 		</div>
+		<a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
 
 		<!-- Next/previous controls -->
 
@@ -242,12 +243,16 @@
 	function openModal() {
 	  document.getElementById("myModal").style.display = "block";
 		document.getElementById("modalContent").style.display = "block";
+		document.getElementById("prev").style.display = "block";
+		document.getElementById("next").style.display = "block";
 	}
 
 	// Close the Modal
 	function closeModal() {
 	  document.getElementById("myModal").style.display = "none";
 		document.getElementById("modalContent").style.display = "none";
+		document.getElementById("prev").style.display = "none";
+		document.getElementById("next").style.display = "none";
 	}
 
 
