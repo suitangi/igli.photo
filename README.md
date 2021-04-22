@@ -1,4 +1,4 @@
 # igli.photography
 Igli.photography page
 
-www.igli.photography
+www.igli.photo
